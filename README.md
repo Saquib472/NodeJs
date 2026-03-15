@@ -45,3 +45,43 @@
 - Handling URLs.
 - npm i url 
 - Handling query params.
+
+## 06_HTTP-Requsts : 
+- GET, POST, PUT, PATCH, DELETE
+- req.method
+
+## 07_Getting-Started-ExpressJs : 
+- Express is a frameWork.
+- We don't need http here or external package like url.
+- npm i express --save
+- app.METHOD(PATH, HANDLER)
+
+## _Versioning : 
+- Let's assume the express version is 5.2.1
+- Three Parts : from right to left
+    - 3rd part : 1 
+        - Minor Fixes (Optional). May be some minor bug fixed.
+    - 2nd part : 2
+        - Recommended Bug Fix (Security Fix). Some features added or Bug fixes.
+    - 1st part : 5
+        - Major Release. (Major / Breaking Update)
+- ^ (Carrot Symbol) : Install all Recommended and Minor Fixes Automatically.
+- ~ (squiggly line) : Install Only Minor Versions automatically.
+
+## _Rest-API : 
+- A REST API (Representational State Transfer API) enables communication between client and server over HTTP. It exchanges data typically in JSON format using standard web protocols.
+- Uses HTTP methods like GET, POST, PUT, PATCH, and DELETE.
+- Client sends requests to server endpoints (URLs).
+- Server returns responses such as JSON(CSR), XML, HTML(SSR), or images.
+- Maps HTTP methods to CRUD operations (Create, Read, Update, Delete).
+- Follow Server Client Architecture.
+- Rules of HTTP Methods like : GET , POST , PATCH , PUT , DELETE
+    - GET/user : Read user data and return data
+    - POST/user : Handle new user creation.
+    - PATCH/user : Update the user data.
+    - POST/createUser : Handle new User Creation (NOT RECOMMENDED)
+    - POST/updateUser : Update the user data. (NOT RECOMMENDED)
+    - POST/deleteUser : Delete the user. (NOT RECOMMENDED)
+- res.send()
+- res.render()
+- res.json()

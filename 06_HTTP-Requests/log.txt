@@ -1,0 +1,4 @@
+
+1773590499275: Method: GET Path: / : New Request Recieved
+1773590499352: Method: GET Path: / : New Request Recieved
+1773590514162: Method: GET Path: /signup : New Request Recieved
