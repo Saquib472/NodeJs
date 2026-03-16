@@ -85,3 +85,10 @@
 - res.send()
 - res.render()
 - res.json()
+
+## 08_Building-Rest-API : 
+- npm init
+- create index.js
+- npm i express
+- Check the task.txt for further details.
+- Using https://mockaroo.com/ for data as of now.
