@@ -92,3 +92,42 @@
 - npm i express
 - Check the task.txt for further details.
 - Using https://mockaroo.com/ for data as of now.
+- Please Check index.js for reference of how to create routes GET, POST, PATCH, DELETE.
+- And how to response in a json format.
+
+## Express Middleware : 
+- Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+- Middleware functions can perform the following tasks:
+    - Execute any code.
+    - Make changes to the request and the response objects.
+    - End the request-response cycle.
+    - Call the next middleware function in the stack.
+
+## HTTP Headers : 
+- HTTP headers are key-value pairs sent between a client (browser) and server in HTTP requests and responses, carrying critical metadata for communication, such as content type, caching policies, authentication, and security settings. They act as invisible instructions that ensure web traffic is routed, rendered, and secured correctly. 
+
+## HTTP Status Code : 
+- HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
+- Informational responses (100 – 199)
+- Successful responses (200 – 299)
+- Redirection messages (300 – 399)
+- Client error responses (400 – 499)
+- Server error responses (500 – 599)
+- Read docs - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+
+## npm i nodemon : for automatic starting server if code changed. 
+- Change package.json : "start" : "nodemon index.js"
+
+## MongoDB : 
+- MongoDB is a document database. It stores data in a type of JSON format called BSON.
+- MongoDB is a document-oriented, operational database built from the ground up as an alternative to the relational database for modern applications. Unlike relational databases, MongoDB allows developers to store rich JSON-like documents that map naturally to the objects they use in their code.
+- Install mongodb community edition and mongodb shell.
+- npm i mongoose  - Mongoose use for connecting database to code.
+- Schema - Define the Structure.
+- Create model using schema.
+- Using Model we do CRUD Operation.
+
+- show dbs
+- use db name
+- show collections
+- 
