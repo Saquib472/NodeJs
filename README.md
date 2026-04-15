@@ -130,4 +130,18 @@
 - show dbs
 - use db name
 - show collections
-- 
+
+## 09_Connecting-MongoDB 
+- Check index.js for reference.
+- Connect DB with Mongoose Library.
+- Mongoose is an Object Data Modeling (ODM) library for MongoDB. You can use Mongoose to help with data modeling, schema enforcement, model validation, and general data manipulation.
+
+## 10_MVC-Pattern
+- Model View Contoller 
+- The Model-View-Controller (MVC) pattern is a software architectural design that separates applications into three interconnected components—Model (data), View (UI), and Controller (logic)—to improve scalability, maintenance, and code organization. It reduces complexity by separating business logic from user interface concerns.
+- Create Folders > 
+    - controllers
+    - models
+    - views
+    - routes
+    - middlewares
