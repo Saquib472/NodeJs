@@ -145,3 +145,19 @@
     - views
     - routes
     - middlewares
+
+## 11_URL-Shortner 
+- npm init
+- npm i express
+- npm i mongoose
+- npm i shortid / nanoid
+- npm i nodemon
+- Folder Structure 
+    - index.js
+    - connection.js
+    - models 
+        - url.js
+    - controllers
+        - url.js
+    - routes
+        - url.js
