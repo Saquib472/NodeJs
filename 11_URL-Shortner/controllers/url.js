@@ -8,9 +8,31 @@ async function handleGenerateNewShortURL(req, res) {
     const result = await URL.create({
         shortId : shortId,
         redirectURL : body.url,
-        visitHistory : []
+        visitHistory : [],
+        createdBy : req.user._id
     })
-    return res.status(201).json({ id : shortId, message : " Short ID creared successfully"})
+    return res.redirect(`/?id=${shortId}`)
+    // return res.status(201).json({ id : shortId, message : " Short ID creared successfully"})
+}
+
+async function handleRedirectToOgURL(req,res){
+    const shortId = req.params.shortId
+    const entry = await URL.findOneAndUpdate(
+        {
+        shortId
+        }, 
+        {
+        $push: {
+            visitHistory: {
+            timestamp: Date.now(),
+            }
+        }
+        }
+    )
+    if (!entry) {
+        return res.status(404).send("Short URL not found");
+    }
+    return res.redirect(entry.redirectURL)
 }
 
 async function handleGetAnalytics(req,res){
@@ -21,5 +43,6 @@ async function handleGetAnalytics(req,res){
 
 module.exports = {
     handleGenerateNewShortURL,
-    handleGetAnalytics
+    handleGetAnalytics,
+    handleRedirectToOgURL
 }

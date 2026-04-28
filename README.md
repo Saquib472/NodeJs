@@ -130,6 +130,8 @@
 - show dbs
 - use db name
 - show collections
+- db.modelName.find({})
+- db.modelName.deleteMany({})
 
 ## 09_Connecting-MongoDB 
 - Check index.js for reference.
@@ -153,11 +155,38 @@
 - npm i shortid / nanoid
 - npm i nodemon
 - Folder Structure 
-    - index.js
-    - connection.js
+    - index.js - Hit Point.
+    - connection.js - A async function which use to connect to MongoDb Database.
     - models 
-        - url.js
+        - url.js - A Mongo Schema with a model.
     - controllers
-        - url.js
+        - url.js - Async functions with logic of CRUD Operations.
     - routes
-        - url.js
+        - url.js - All the routes like GET, POST, PATCH, DELETE.
+        - "/" , POST - To post the redirectURL And Creat the Short URL and VisitHistory.
+        - "/:shortId" - To redirect to the main URL.
+        - "/analytics/:shortId" - To get the Visited History.
+    - views
+        - All the HTML / EJS files.
+- Server Side Rendering
+    - An HTML page render from the server itself.
+    - Use a Template Engine - A template engine in Node.js is a tool that allows you to use static template files (blueprints) and dynamically inject data into them to produce final HTML pages. This process, often called Server-Side Rendering (SSR), helps you separate your application logic from your presentation (HTML). 
+    - Popular Template Engines are EJS, Pug etc.
+    - Use EJS.(Embedded JavaScript)
+    - npm i ejs
+    - express ejs.
+    - app.set()
+    - You need path for views to know where the html ejs files are.
+- Authentication :
+    - Two Patterns -> Statefull AND Stateless.
+    - Create user collection model.
+    - Create user route and controllers
+    - Create signup and login ejs page.
+    - Coockies
+    - npm i uuid
+    - Create service folder - auth.js (Mapping session id with user)
+    - setUser and getUser
+    - While login set the user with uuid and return res.cookie
+    - npm i cookie-parser
+    - Create a Middleware auth.js for checking the user logged in or not.
+    - Add createdBy to the db model.
